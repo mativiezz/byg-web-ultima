@@ -1,0 +1,54 @@
+<div class="absolute bottom-16 left-0 w-full">
+  <form id="phone-form" class="flex border border-blue-600 rounded overflow-hidden h-16 w-auto mx-8">
+    <input 
+      type="tel" 
+      id="phone-number"
+      name="phoneNumber" 
+      placeholder="Enter your phone number" 
+      maxlength="10"
+      pattern="[0-9]{10}" 
+      title="Please enter a valid 10-digit phone number" 
+      class="bg-white text-[#B3B3B3] placeholder-[#B3B3B3] text-2xl placeholder:text-xl border border-blue-800 flex-grow outline-none pl-8" 
+      required 
+    />
+    <button 
+      type="submit" 
+      class="bg-blue-600 text-white font-bold w-36 text-lg" 
+    >
+      CALL ME
+    </button>
+  </form>
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Explicitly type the form and input elements
+  const form = document.getElementById('phone-form') as HTMLFormElement | null;
+  const phoneNumberInput = document.getElementById('phone-number') as HTMLInputElement | null;
+
+  // Ensure form and phoneNumberInput exist before proceeding
+  if (!form || !phoneNumberInput) {
+    console.error('Form or phone number input element not found.');
+    return; // Stop script execution if elements are missing
+  }
+
+  // Function to handle form submission, using the correct type for the event
+  const handleSubmit = (event: SubmitEvent) => {
+    event.preventDefault();
+    const phoneNumber = phoneNumberInput.value.trim();
+
+    // Basic validation for 10-digit phone number
+    if (phoneNumber.length === 10 && /^[0-9]+$/.test(phoneNumber)) {
+      console.log(`Phone number submitted: ${phoneNumber}`);
+      // Add further actions here, such as API calls or success messages
+    } else {
+      alert('Please enter a valid 10-digit phone number.');
+    }
+  };
+
+  // Attach the form submit handler
+  form.addEventListener('submit', handleSubmit);
+});
+
+</script>

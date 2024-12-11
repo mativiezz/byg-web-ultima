@@ -1,0 +1,41 @@
+---
+---
+
+<div class="absolute top-0 left-0 m-16">
+  <div class="mt-6">
+    <!-- Use an ID to uniquely identify this 'p' element -->
+    <p id="typing-text" class="text-gray-700 text-lg break-words">
+    </p>
+  </div>  
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const typingText = "Hey there! I’m GLY, your AI-Worker assistant. I’m here to handle all your phone calls, 24/7, with any voice you need, for any situation. Whether it’s reaching out to customers, scheduling appointments, or delivering messages, I can do it all. You might even think I sound human—but I'll let you decide that for yourself!";
+    const typingSpeed = 100; // Typing speed in milliseconds
+    let typedText = ""; // Accumulate typed text
+    let index = 0;
+    console.log(2)
+    // Ensure text updates are smooth and efficient using requestAnimationFrame
+    const updateText = () => {
+    console.log(3)
+      const textElement = document.getElementById('typing-text'); // Get the text element
+      if (!textElement) {
+        console.error('Text element with ID "typing-text" not found.');
+        return;
+      }
+
+      if (index < typingText.length) {
+        typedText += typingText.charAt(index); // Add one character at a time
+        textElement.textContent = typedText; // Update the content
+        index++; // Move to the next character
+
+        // Use requestAnimationFrame for smoother updates
+        setTimeout(() => requestAnimationFrame(updateText), typingSpeed);
+      }
+    };
+
+    // Start the typing effect after a slight delay
+    setTimeout(updateText, typingSpeed);
+  });
+</script>

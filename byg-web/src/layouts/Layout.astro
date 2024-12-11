@@ -1,0 +1,100 @@
+---
+import '../styles/tailwind.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+    title: string;
+    description?: string;
+}
+
+const { 
+    title,
+    description = "GLYFO - AI Workers Platform"
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#F05523">
+        <link rel="icon" type="image/svg+xml" href="/logo.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+
+        <style>
+            :root {
+                --naranja-principal: #F05523;
+                --naranja-claro: #FFE6DD;
+                --gris-oscuro: #2C3E50;
+                --beige: #FDF6F2;
+                --font-primary: 'Playfair Display', serif;
+                --font-secondary: 'Lato', sans-serif;
+                
+                /* Nuevas variables para espaciado consistente */
+                --spacing-xs: 0.5rem;
+                --spacing-sm: 1rem;
+                --spacing-md: 1.5rem;
+                --spacing-lg: 2rem;
+                --spacing-xl: 3rem;
+                
+                /* Variables para transiciones suaves */
+                --transition-fast: 0.2s ease-in-out;
+                --transition-normal: 0.3s ease-in-out;
+            }
+
+            /* Estilos base optimizados */
+            html {
+                font-size: 16px;
+                text-rendering: optimizeLegibility;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            body {
+                background-color: var(--beige);
+                color: var(--gris-oscuro);
+                font-family: var(--font-secondary);
+                line-height: 1.6;
+                overflow-x: hidden;
+            }
+
+            /* Micro-animaciones para interacciones */
+            .fade-in {
+                animation: fadeIn var(--transition-normal);
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+
+            /* Mejoras en la tipografía */
+            h1, h2, h3, h4, h5, h6 {
+                font-family: var(--font-primary);
+                font-weight: 600;
+                line-height: 1.2;
+                margin-bottom: var(--spacing-sm);
+            }
+
+            /* Optimización para dispositivos móviles */
+            @media (max-width: 768px) {
+                html {
+                    font-size: 14px;
+                }
+            }
+        </style>
+    </head>
+    <body class="min-h-screen flex flex-col">
+        <Header />
+        <main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 fade-in">
+            <slot />
+        </main>
+        <Footer />
+    </body>
+</html>

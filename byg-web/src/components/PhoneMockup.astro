@@ -1,0 +1,232 @@
+---
+// PhoneMockup.astro
+---
+
+<div class="phone-mockup">
+    <div class="phone-frame">
+        <div class="notch"></div>
+        <div class="screen">
+            <h1>Expertos en Derecho de Familia</h1>
+            <p>Obtén la pensión alimenticia que mereces. Te guiamos en cada paso del proceso legal.</p>
+            <a href="https://wa.me/56944947427?text=Hola,%20necesito%20asesoría%20en%20derecho%20de%20familia" 
+               class="cta-button"
+               target="_blank"
+               rel="noopener noreferrer">
+                Iniciar consulta
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                </svg>
+            </a>
+            <div class="chat-interface">
+                <div class="user-message">Necesito ayuda para demandar por alimentos.</div>
+                <div class="ai-message">
+                    Claro, puedo ayudarte con eso. ¿Es para tus hijos o para ti mismo/a?
+                </div>
+                <div class="user-message">Es para mis dos hijos menores de edad.</div>
+                <div class="ai-message">
+                    Entendido. Para iniciar una demanda de alimentos te daremos la mejor asesoría especializada.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="feature-list">
+        <div class="feature">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <h3>Asesoría personalizada</h3>
+            <p>Nuestros abogados te guiarán en cada etapa de tu proceso judicial y extrajudicial.</p>
+        </div>
+        <div class="feature">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <h3>Respuesta rápida</h3>
+            <p>Atendemos tu caso con la urgencia que merece para asegurar el bienestar de tu familia.</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .phone-mockup {
+        font-family: 'Arial', sans-serif;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px;
+    }
+
+    .phone-frame {
+        width: 300px;
+        height: 600px;
+        background-color: #ffffff;
+        border-radius: 40px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        position: relative;
+        transition: transform 0.3s ease;
+    }
+
+    .phone-frame:hover {
+        transform: translateY(-10px);
+    }
+
+    .notch {
+        width: 150px;
+        height: 30px;
+        background-color: #000;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .screen {
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+        color: #ea580c;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .cta-button {
+        background-color: #ea580c;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        width: fit-content;
+    }
+
+    .cta-button:hover {
+        background-color: #d94a08;
+        transform: translateY(-2px);
+    }
+
+    .cta-button svg {
+        width: 20px;
+        height: 20px;
+        margin-left: 5px;
+    }
+
+    .chat-interface {
+        margin-top: 30px;
+    }
+
+    .user-message,
+    .ai-message {
+        padding: 10px;
+        border-radius: 15px;
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+
+    .user-message {
+        background-color: #f0f0f0;
+        align-self: flex-end;
+    }
+
+    .ai-message {
+        background-color: #fff0e6;
+        color: #ea580c;
+    }
+
+    .feature-list {
+        width: 50%;
+    }
+
+    .feature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 30px;
+        background: white;
+        padding: 2.5rem 2rem;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+    }
+
+    .feature:hover {
+        transform: translateX(5px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    .feature svg {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 1.5rem;
+        color: #ea580c;
+    }
+
+    .feature h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        position: relative;
+        width: 100%;
+        background: linear-gradient(45deg, #ea580c, #ff7e50);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        font-weight: 700;
+    }
+
+    .feature h3::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(45deg, #ea580c, #ff7e50);
+        border-radius: 2px;
+    }
+
+    .feature p {
+        font-size: 1rem;
+        color: #666;
+        line-height: 1.6;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 968px) {
+        .phone-mockup {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .feature-list {
+            width: 100%;
+            margin-top: 40px;
+        }
+        
+        .cta-button {
+            margin: 0 auto;
+        }
+    }
+</style>

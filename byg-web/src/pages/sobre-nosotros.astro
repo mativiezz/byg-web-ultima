@@ -1,0 +1,54 @@
+---
+// src/pages/sobre-nosotros.astro
+import Layout from '../layouts/Layout.astro';  // Asegúrate de tener tu Layout configurado
+---
+
+<Layout title="Sobre Nosotros - Barahona & Gálvez">
+  <main class="max-w-7xl mx-auto px-4 py-24">
+    <h1 class="text-4xl font-serif font-bold text-stone-800 mb-8">
+      Sobre Nosotros
+    </h1>
+    
+    <div class="grid gap-8">
+      <!-- Sección de Historia -->
+      <section class="bg-white p-8 rounded-lg shadow-md">
+        <h2 class="text-2xl font-serif text-orange-600 mb-4">Nuestra Historia</h2>
+        <p class="text-stone-700 leading-relaxed">
+          [Aquí va la historia del bufete]
+        </p>
+      </section>
+
+      <!-- Sección de Valores -->
+      <section class="bg-white p-8 rounded-lg shadow-md">
+        <h2 class="text-2xl font-serif text-orange-600 mb-4">Nuestros Valores</h2>
+        <ul class="list-disc list-inside text-stone-700 space-y-2">
+          <li>Compromiso con la excelencia</li>
+          <li>Ética profesional</li>
+          <li>Atención personalizada</li>
+          <!-- Agregar más valores -->
+        </ul>
+      </section>
+
+      <!-- Sección del Equipo -->
+      <section class="bg-white p-8 rounded-lg shadow-md">
+        <h2 class="text-2xl font-serif text-orange-600 mb-4">Nuestro Equipo</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Miembro del Equipo 1 -->
+          <div class="flex flex-col items-center">
+            <img 
+              src="/ruta-a-tu-imagen.jpg" 
+              alt="Nombre del Abogado" 
+              class="w-48 h-48 object-cover rounded-full mb-4"
+            />
+            <h3 class="text-xl font-semibold text-stone-800">Nombre del Abogado</h3>
+            <p class="text-orange-600">Cargo / Especialidad</p>
+            <p class="text-stone-600 text-center mt-2">
+              Breve descripción o biografía del abogado
+            </p>
+          </div>
+          <!-- Agregar más miembros del equipo siguiendo el mismo formato -->
+        </div>
+      </section>
+    </div>
+  </main>
+</Layout>

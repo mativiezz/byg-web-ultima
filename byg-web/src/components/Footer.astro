@@ -1,0 +1,260 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<style>
+:root {
+  --naranja-principal: #F05523;
+  --naranja-claro: #FFE6DD;
+  --gris-oscuro: #2C3E50;
+  --beige: #FDF6F2;
+  --font-primary: 'Playfair Display', serif;
+  --font-secondary: 'Lato', sans-serif;
+  --transition-default: all 0.3s ease-in-out;
+}
+
+.footer {
+  background: linear-gradient(to right, var(--beige), white);
+  font-family: var(--font-secondary);
+  padding: 4rem 0;
+  line-height: 1.6;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr repeat(4, 1fr);
+  gap: 3rem;
+  align-items: start;
+}
+
+.footer-brand {
+  padding-right: 2rem;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 1.5rem;
+  transition: var(--transition-default);
+}
+
+.footer-logo img {
+  height: 40px;
+  width: auto;
+}
+
+.footer-contact {
+  font-size: 0.9rem;
+  color: var(--gris-oscuro);
+  margin-top: 1.5rem;
+}
+
+.footer-contact p {
+  margin: 0.5rem 0;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-heading {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--naranja-principal);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--naranja-claro);
+  min-height: 2.4em;
+  display: flex;
+  align-items: flex-start;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-link {
+  color: var(--gris-oscuro);
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  transition: var(--transition-default);
+  display: inline-block;
+  padding: 0.2rem 0;
+}
+
+.footer-link:hover {
+  color: var(--naranja-principal);
+  transform: translateX(0.5rem);
+}
+
+.footer-bottom {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(44, 62, 80, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copyright {
+  color: var(--gris-oscuro);
+  font-size: 0.9rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-link {
+  color: var(--naranja-principal);
+  transition: var(--transition-default);
+}
+
+.social-link:hover {
+  color: var(--gris-oscuro);
+  transform: translateY(-3px);
+}
+
+.social-link svg {
+  height: 24px;
+  width: 24px;
+}
+
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .footer-brand {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding-right: 0;
+  }
+  
+  .footer-heading {
+    white-space: normal;
+    min-height: auto;
+  }
+  
+  .footer-logo {
+    margin: 0 auto 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-section {
+    text-align: center;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+}
+</style>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">
+          <img src="/path-to-logo.png" alt="Barahona&Gálvez">
+        </a>
+        <div class="footer-contact">
+          <p>byg.abogadosdigitales@gmail.com</p>
+          <p>Calle San Sebastián, Of. 601, Las Condes</p>
+          <p>+56 9 44947427</p>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3 class="footer-heading">Alimentos</h3>
+        <ul class="footer-list">
+          <li><a href="#" class="footer-link">Demanda de alimentos</a></li>
+          <li><a href="#" class="footer-link">Aumento, rebaja y Cese de Alimentos</a></li>
+          <li><a href="#" class="footer-link">Cumplimiento de Alimentos</a></li>
+          <li><a href="#" class="footer-link">Retiro de deudas en AFP</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3 class="footer-heading">Medidas De Protección</h3>
+        <ul class="footer-list">
+          <li><a href="#" class="footer-link">Cumplimiento Medidas de Protección</a></li>
+          <li><a href="#" class="footer-link">Protección a la infancia</a></li>
+          <li><a href="#" class="footer-link">Defensa Medidas Cautelares</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3 class="footer-heading">Régimen de Visitas</h3>
+        <ul class="footer-list">
+          <li><a href="#" class="footer-link">Regímenes Relación Directa y Regular</a></li>
+          <li><a href="#" class="footer-link">Modificación Relación Directa y Regular</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3 class="footer-heading">Otras Gestiones</h3>
+        <ul class="footer-list">
+          <li><a href="#" class="footer-link">Cuidado Personal</a></li>
+          <li><a href="#" class="footer-link">Divorcio Unilateral y Mutuo Acuerdo</a></li>
+          <li><a href="#" class="footer-link">Derecho Laboral</a></li>
+          <li><a href="#" class="footer-link">Autorización para salir del País</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright">
+        © {currentYear} Barahona&Gálvez Abogados Limitada. Todos los derechos reservados.
+      </p>
+      
+      <div class="footer-social">
+        <a href="#" class="social-link" aria-label="LinkedIn">
+          <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+        <a href="#" class="social-link" aria-label="WhatsApp">
+          <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.947 3.052c-2.305-2.306-5.37-3.576-8.635-3.577-6.728 0-12.202 5.474-12.203 12.202 0 2.15.562 4.246 1.63 6.093l-1.731 6.324 6.471-1.698c1.78.971 3.792 1.483 5.832 1.483h.005c6.728 0 12.202-5.474 12.203-12.202 0-3.265-1.27-6.33-3.572-8.635zm-8.635 18.795h-.004c-1.822 0-3.608-.49-5.171-1.415l-.37-.22-3.842 1.008.026-.407.98-3.582-.242-.385c-1.02-1.623-1.558-3.496-1.558-5.44 0-5.597 4.555-10.152 10.153-10.152 2.71 0 5.257 1.057 7.173 2.974 1.917 1.917 2.972 4.464 2.971 7.174 0 5.597-4.555 10.152-10.153 10.152zm5.564-7.615c-.306-.153-1.813-.894-2.094-.995-.281-.102-.486-.153-.69.153-.205.305-.793.995-.972 1.199-.178.204-.357.23-.663.077-.306-.153-1.29-.476-2.457-1.517-.909-.81-1.522-1.811-1.7-2.116-.178-.305-.019-.47.134-.622.137-.137.306-.357.459-.536.153-.178.204-.306.306-.51.102-.204.051-.382-.026-.536-.077-.153-.69-1.662-.945-2.275-.248-.603-.501-.522-.69-.532-.178-.01-.383-.01-.587-.01-.204 0-.536.077-.817.382-.281.305-1.073 1.05-1.073 2.557 0 1.509 1.098 2.968 1.251 3.173.153.204 2.15 3.284 5.214 4.606 3.064 1.322 3.064 .881 3.622.826.558-.055 1.813-.742 2.069-1.458.256-.716.256-1.33.179-1.458-.077-.128-.282-.204-.588-.357z"/>
+          </svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Gmail">
+          <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

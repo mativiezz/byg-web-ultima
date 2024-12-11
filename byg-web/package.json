@@ -1,0 +1,28 @@
+{
+  "name": "website-agent-platform",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro build && wrangler dev",
+    "astro": "astro",
+    "deploy": "astro build && wrangler deploy",
+    "cf-typegen": "wrangler types"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/cloudflare": "^11.1.0",
+    "@astrojs/tailwind": "^5.1.1",
+    "@tailwindcss/typography": "^0.5.15",
+    "astro": "^4.15.11",
+    "canvas-confetti": "^1.9.3",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.6.2"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241004.0",
+    "wrangler": "^3.80.0"
+  }
+}
